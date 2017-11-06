@@ -1,0 +1,25 @@
+<h1>The Longest Word</h1>
+<p>Make words from the letters given. Use English!</p>
+
+
+<!-- //GET '/game': render the page with a new random grid of words, and the HTML form to write your guess just below the word-grid. -->
+
+
+<p> <%= @letter_grid %> </p>
+
+<form action="/score">
+  <label for="question">What's your best shot?</label>
+  <input type="text" id="question" name="guess" placeholder="What's your best shot?">
+  <input type="hidden" id="grid" name="grid" value="<%= @letter_grid %>">
+  <input type="hidden" id="start_time" name="start_time" value="<%= @start_time %>">
+  <input type="submit" value="Go on!">
+</form>
+
+
+<!--
+
+<form action="/answer">
+  <label for="question">Speak to your coach</label>
+  <input type="text" id="question" name="query" placeholder="what time is it?">
+  <input type="submit" value="Go on!">
+</form> -->

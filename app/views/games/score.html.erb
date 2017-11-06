@@ -1,0 +1,16 @@
+<style>
+strong {
+        color: red;
+        text-transform: uppercase;
+}
+</style>
+
+<h1>Your Score</h1>
+
+<p>The grid was <%= @grid %> </p>
+
+<h2>You Guessed <strong ><%= @guess %></strong> </h2>
+
+<h3>Your score is <%= "#{@results}" %></h3>
+
+<%= link_to "Play Again?", game_path %>
